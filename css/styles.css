@@ -787,16 +787,19 @@ address {
 
 .modal-field-comment {
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .modal-lable-comment {
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* color: #8E8F9; */
+  color: rgba(46, 47, 66, 0.4);
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17; /* 116.667% */
+  letter-spacing: 0.04em;
+  background-color: transparent;
   height: 120px;
   flex-shrink: 0;
   border-radius: 4px;
@@ -821,7 +824,7 @@ address {
   letter-spacing: 0.04em;
   margin-top: 8px;
 }
-.check-input-text a {
+.user-privacy-link {
   color: #4d5ae5;
   text-decoration: underline;
 }
@@ -846,8 +849,8 @@ address {
 }
 
 .check-input:checked + .user-privacy-span {
-  background-color: #4d5ae5;
-  fill: #e7e9fc;
+  background-color: #404bbf;
+  fill: #f4f4fd;
   border: none;
 }
 
@@ -863,8 +866,10 @@ address {
   border-radius: 4px;
   background: #4d5ae5;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
   /*  */
-  display: inline-flex;
+  min-width: 169px;
+  display: block;
   justify-content: center;
   padding: 16px 32px;
   align-items: flex-start;
@@ -876,4 +881,5 @@ address {
   border-radius: 4px;
   background: #4d5ae5;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
