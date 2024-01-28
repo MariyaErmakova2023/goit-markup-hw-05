@@ -651,6 +651,8 @@ address {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
@@ -661,7 +663,7 @@ address {
 
 .modal {
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   border-radius: 4px;
   background: var(--DAIRY, #fcfcfc);
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
@@ -670,7 +672,8 @@ address {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn {
   width: 24px;
@@ -685,17 +688,39 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-title {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.modal-close-btn-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon {
+  fill: #ffffff;
+}
+
+. .modal-title {
   color: #2e2f42;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
-  padding-top: 48px;
-  padding-bottom: 16px;
+  /* padding-top: 48px;
+  padding-bottom: 16px; */
+  margin-bottom: 16px;
 }
 
 .modal-form {
@@ -704,9 +729,11 @@ address {
   gap: 8px;
   align-items: flex-start;
 }
+
 .modal-field {
   display: block;
   width: 100%;
+  margin-bottom: 8px;
 }
 
 .modal-lable {
@@ -716,6 +743,8 @@ address {
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.04em;
   max-width: 4px;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .modal-lable-wrap {
@@ -735,6 +764,8 @@ address {
   border: 1px solid rgba(46, 47, 66, 0.4);
   padding-left: 38px;
   outline: transparent;
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
@@ -751,6 +782,11 @@ address {
   top: 50%;
   transform: translateY(-50%);
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-field-comment {
+  margin-bottom: 16px;
 }
 
 .modal-lable-comment {
@@ -768,6 +804,7 @@ address {
   padding: 8px 16px;
   outline: transparent;
   resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-lable-comment:focus {
   border-color: #4d5ae5;
