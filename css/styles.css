@@ -602,45 +602,51 @@ address {
 .footer-email {
   width: 264px;
   height: 40px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 2; /* 200% */
+  letter-spacing: 0.04em;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: transparent;
-  padding: 0 24px;
+  padding-left: 16px;
 }
 .footer-email::placeholder {
   color: #fff;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 2px; /* 200% */
-  letter-spacing: 0.04em;
 }
 .footer-btn {
-  display: inline-flex;
-  width: 165px;
+  display: flex;
+  min-width: 165px;
   height: 40px;
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
   gap: 16px;
   border-radius: 4px;
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   color: #fff;
   text-align: center;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.04em;
   border: none;
   align-content: flex-start;
+  cursor: pointer;
 }
 
-.footer-email-wrap {
+.footer-btn-icon {
+  margin-left: 16px;
+  fill: #fff;
+}
+/* .footer-email-wrap {
   display: flex;
   gap: 24px;
   justify-content: space-between;
-}
+} */
 /**---------------------------------------------*/
 
 /**---------------MODAL WINDOW------------------------*/
@@ -884,4 +890,7 @@ address {
   background: #4d5ae5;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-subscribe {
+  margin-left: auto;
 }
